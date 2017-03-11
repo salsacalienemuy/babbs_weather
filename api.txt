@@ -1,0 +1,4 @@
+https://api.darksky.net/forecast/adf6f1fdebe4db456f9c1990cc0dc808/37.8267,-122.4233
+
+https://api.darksky.net/forecast/7d6b840a8882bb9b82bdb940fe731e14/34.9813859,-101.9181973
+34.9813859,-101.9181973

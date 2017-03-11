@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="ForecastApp">
+	<head>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
+
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div ng-controller="WeatherServiceController as wsc">
+		    <h1>{{wsc.app_name}}</h1>
+		    <h3>Select A City</h3>
+		    <select ng-model="wsc.selected_city" 
+                    ng-options="city.name for city in wsc.cities" 
+                    ng-change="wsc.getCurrentConditions()"></select>
+            <!--
+            <p>Time: {{wsc.observation_time}}</p>
+            <p>Temperature: {{wsc.ds_temperature}}</p>
+            <p>Dewpoint: {{wsc.ds_dewpoint}}</p>
+            <p>Wind Direction: {{wsc.ds_windBearing}}</p>
+            <p>Wind Speed: {{wsc.ds_windSpeed}}</p>
+            -->
+            
+            <my-conditions-special></my-conditions-special>
+            
+            
+		</div>
+        
+		<script src="angular.js"></script>
+		<script src="app.js"></script>	        
+        
+	</body>
+</html>
